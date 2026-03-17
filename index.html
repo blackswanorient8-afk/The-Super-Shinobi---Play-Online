@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <meta charset="UTF-8">
+    <title>                THE SUPER SHINOBI The (Japan) (En) (Beta) (1989)</title>
+    
+
+  </head>
+    
+  <body>
+  <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Super Shinobi - Play Online</title>
+    <style>
+        body, html {
+            margin: 0;
+            padding: 0;
+            width: 100%;
+            height: 100%;
+            overflow: hidden;
+            background-color: #000;
+        }
+        #game-container {
+            width: 100vw;
+            height: 100vh;
+            display: none; /* Hidden until start */
+        }
+        iframe {
+            width: 100%;
+            height: 100%;
+            border: none;
+        }
+        #start-screen {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.9);
+            color: white;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            font-family: 'Arial', sans-serif;
+            text-align: center;
+            z-index: 100;
+        }
+        button {
+            padding: 15px 30px;
+            font-size: 20px;
+            cursor: pointer;
+            background-color: #e74c3c;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            margin-top: 20px;
+        }
+        button:hover {
+            background-color: #c0392b;
+        }
+        ul {
+            text-align: left;
+            line-height: 1.6;
+        }
+    </style>
+</head>
+<body>
+
+    <div id="start-screen">
+        <h1>The Super Shinobi</h1>
+        <h2>Controls</h2>
+        <ul>
+            <li><strong>Start Game:</strong> Press 1</li>
+            <li><strong>Move:</strong> Arrow Keys</li>
+            <li><strong>Controls:</strong> A (Control), B (Alt), C (Space)</li>
+        </ul>
+        <button onclick="startGame()">Start Game</button>
+    </div>
+
+    <div id="game-container">
+        <!-- Added allow="autoplay" for sound -->
+        <iframe id="game-iframe" 
+                src="https://archive.org/embed/mdb_Super_Shinobi_The_Japan_En_Beta_1989-xx-xx_Sega_Smash_Pack.md" 
+                frameborder="0" 
+                webkitallowfullscreen="true" 
+                mozallowfullscreen="true" 
+                allowfullscreen="true"
+                allow="autoplay; fullscreen; microphone">
+        </iframe>
+    </div>
+
+    <script>
+        function startGame() {
+            // Hide start screen
+            document.getElementById('start-screen').style.display = 'none';
+            // Show game container
+            document.getElementById('game-container').style.display = 'block';
+            
+            // Request Fullscreen
+            let elem = document.getElementById('game-container');
+            if (elem.requestFullscreen) {
+                elem.requestFullscreen();
+            } else if (elem.webkitRequestFullscreen) {
+                elem.webkitRequestFullscreen();
+            } else if (elem.msRequestFullscreen) {
+                elem.msRequestFullscreen();
+            }
+        }
+    </script>
+
+</body>
+</html>
+    
+  </body>
+  
+</html>
